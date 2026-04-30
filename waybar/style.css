@@ -1,0 +1,102 @@
+/* Configurações gerais */
+ *{
+  border: none;
+  font-family: "Departure Mono";
+  font-size: 14px;
+  min-height: 8px;
+}
+
+/* Configurações da barra de fundo */
+window#waybar {
+  border: 2px solid #84C5B1;
+  background-color: rgba(242,234,224,0.8);
+  border-radius: 6px;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+/* Configurações módulos da esquerda */
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#temperature {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#pulseaudio-slider,
+#power-profiles-daemon,
+#mpris {
+  color: #000000;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Configurações especificas de módulos */
+
+/* Módulos esquerda */
+#custom-archicon {
+  color: #1793d1;
+  font-size: 20px;
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+#clock {
+  background: #898AC4;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#cpu {
+  background: #8494FF;
+}
+
+#memory {
+  background: #8CA9FF;
+}
+
+#temperature {
+  background: #AAC4F5;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Módulos centro */
+
+/* Módulos direita */
+#power-profiles-daemon {
+  background: #81A6C6;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+#pulseaudio-slider {
+  background: #F8FAB4;
+  min-width: 100px;
+}
+
+#pulseaudio-slider trough {
+  min-height: 5px;
+  min-width: 10px;
+  border-radius: 2px;
+  background: gray;
+}
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 2px;
+  background: black;
+
+}
+#mpris {
+  min-width: 15px;
+  background: #A2CB8B;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-right: 6px;
+}

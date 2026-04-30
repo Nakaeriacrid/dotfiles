@@ -1,0 +1,94 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "margin-right": 6,
+  "margin-left": 6,
+  "margin-top": 6,
+  "margin-bottom": 1,
+  "autohide-blocked": false,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+
+  /* Ordenação dos módulos */
+  "modules-left": [
+    "custom/archicon",
+    "clock",
+    "cpu",
+    "memory",
+    "temperature"
+  ],
+
+  "modules-center": [
+  ],
+
+  "modules-right": [
+    "power-profiles-daemon",
+    "pulseaudio/slider",
+    "mpris"
+  ],
+  /* Módulos da esquerda */
+  "custom/archicon": {
+    "format": ""
+  },
+  "clock": {
+    "timezone": "America/Sao_Paulo",
+    "format": "{:%H:%M  %d/%m}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "iso8601": "true"
+    }
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% 󰍛",
+    "tooltip": true,
+    "tooltip-format": "Em Uso: {used} / {total} ({percentage}%)"
+  },
+  "temperature": {
+    "format": "{temperatureC}°C {icon}",
+    "tooltip": false,
+    "format-icons": [
+      ""
+    ]
+  },
+  /* Módulos centro */
+
+  /* Módulos direita */
+  "pulseaudio/slider": {
+    "format": "{volume}%",
+    "format-muted": " MUTE",
+    "step": 5,
+    "tooltip": false
+  },
+  "power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "{profile}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "",
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+},
+  "mpris": {
+  "interval": 1,
+  "format": "{player_icon} {artist}//{title} - {album}",
+  "format-paused": "{status_icon} {title} - {album}",
+  "title-len": 30,
+  "tooltip-format": "Artista: {artist} - Musica/Album: {title}/{album} {position}//{length}",
+  "player-icons": {
+    "default": "▶",
+    "mpv": "🎵"
+    },
+  "status-icons": {
+    "paused": "⏸"
+    },
+  }
+}
