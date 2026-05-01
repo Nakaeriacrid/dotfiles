@@ -2,14 +2,14 @@
  *{
   border: none;
   font-family: "Departure Mono";
-  font-size: 14px;
+  font-size: 11px;
   min-height: 8px;
 }
 
 /* Configurações da barra de fundo */
 window#waybar {
   border: 2px solid #84C5B1;
-  background-color: rgba(242,234,224,0.8);
+  background-color: rgba(0,0,0,0.3);
   border-radius: 6px;
 }
 
@@ -72,12 +72,12 @@ window#waybar.hidden {
 
 /* Módulos direita */
 #power-profiles-daemon {
-  background: #81A6C6;
+  background: #6875ED;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
 #pulseaudio-slider {
-  background: #F8FAB4;
+  background: #EDED68;
   min-width: 100px;
 }
 
@@ -95,7 +95,7 @@ window#waybar.hidden {
 }
 #mpris {
   min-width: 15px;
-  background: #A2CB8B;
+  background: #78EC6A;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   margin-right: 6px;

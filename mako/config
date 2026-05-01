@@ -1,0 +1,17 @@
+font=DepartureMono 11
+background-color=#FBBCDD
+text-color=#000000
+width=370
+height=280
+outer-margin=20,4,4,4
+padding=10,10
+border-size=2
+border-color=#000000
+border-radius=6
+icon-location=right
+history=1
+max-history=5
+text-alignment=left
+default-timeout=3000
+ignore-timeout=1
+format= %a - %s \n \n%b

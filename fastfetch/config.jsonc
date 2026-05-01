@@ -2,27 +2,16 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
   "logo": {
     "type": "auto",
-    "source": "/home/nakaeri/.config/fastfetch/images/*",
-    "color": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": ""
-    },
-    "width": 45,
-    "height": 30,
+    "source": "$HOME/.config/fastfetch/images/*",
+    "width": 43,
+    "height": 28,
     "padding": {
-      "top": 1,
-      "left": 2,
-      "right": 10,
+      "top": 2,
+      "left": 3,
+      "right": 4,
     },
     "printRemaining": true,
-    "preserveAspectRatio": false,
+    "preserveAspectRatio": true,
     "recache": false,
     "position": "left",
     "chafa": {
@@ -43,7 +32,7 @@
       "output": "#FFFFFF",
       "separator": "#00FFF2"
     },
-    "brightColor": true,
+    "brightColor": false,
     "duration": {
       "abbreviation": false,
       "spaceBeforeUnit": "default"
@@ -51,18 +40,18 @@
     "size": {
       "maxPrefix": "YB",
       "binaryPrefix": "jedec",
-      "ndigits": 0,
+      "ndigits": 1,
       "spaceBeforeUnit": "default"
     },
     "percent": {
       "type": 2,
       "color": {
-        "green": "light_green",
-        "yellow": "light_yellow",
-        "red": "light_red"
+        "green": "#63FF40",
+        "yellow": "#FFF940",
+        "red": "#FF4040"
       },
       "spaceBeforeUnit": "default",
-      "width": 2
+      "width": 10
     },
     "bar": {
       "char": {
@@ -89,10 +78,10 @@
     "key": {
       "width": 0,
       "type": "string",
-      "paddingLeft": 0
+      "paddingLeft": 1
     },
     "freq": {
-      "ndigits": 2,
+      "ndigits": 1,
       "spaceBeforeUnit": "default"
     },
     "constants": []
@@ -119,18 +108,21 @@
      "break",
     {
      "type": "custom",
-     "format": " "
+     "key": "Meu GitHub",
+     "separator": " 󰔰 ",
+     "format": "https://github.com/Nakaeriacrid?tab=repositories",
+     "outputColor": "#00FFCF",
     },
      "break",
     {
       "type": "separator",
       "string": "",
-      "outputColor": "#00FFCF",
+      "outputColor": "#40FFD9",
       "times": 22
     },
     {
       "type": "custom",
-      "format": "───────────────────────╯",
+      "format": "─────────────────────────────────────────────────────────────────╯",
     },
       "break",
     {
@@ -140,24 +132,22 @@
       "break",
     {
       "type": "kernel",
-      "key": " Distro ",
+      "key": "Distro ",
       "format": "{sysname} {release}",
       "type": "kernel"
     },
     {
       "type": "bootmgr",
-      "key": " Boot 󰇅",
+      "key": "Boot-manager 󰇅",
       "format": "{firmware-name}"
     },
     {
       "type": "uptime",
-      "key": " Tempo-Ligado 󰦖",
-      "keyIcon": ""
+      "key": "Tempo-Ligado 󰦖",
     },
     {
       "type": "packages",
-      "keyIcon": "󰏖",
-      "key": " Pacotes 󰏔",
+      "key": "Pacotes 󰏔",
       "disabled": [
         "apk"
       ],
@@ -165,33 +155,29 @@
     },
     {
       "type": "wm",
-      "key": " Window-Manager 󰨇",
+      "key": "Window-Manager 󰨇",
       "format": "{pretty-name}",
-      "keyIcon": "",
       "detectPlugin": true
     },
     {
       "type": "separator",
       "string": "",
-      "outputColor": "#FFFFFF",
+      "outputColor": "#40FFD9",
       "times": 50
     },
     {
       "type": "terminal",
       "format": "{pretty-name}",
-      "key": " Terminal ",
-      "keyIcon": ""
+      "key": "Terminal ",
     },
     {
       "type": "terminalfont",
-      "key": " Fonte-Terminal ",
+      "key": "Fonte-Terminal ",
       "format": "{name} {size}px",
-      "keyIcon": ""
     },
     {
       "type": "locale",
-      "keyIcon": "",
-      "key": " Localização "
+      "key": "Localização "
     },
     {
       "type": "custom",
@@ -206,42 +192,26 @@
     {
       "type": "cpu",
       "format": "{name} / {freq-max}",
-      "key": " Processador  ",
-      "keyIcon": "",
-      "temp": false,
-      "showPeCoreCount": false
+      "key": "Processador  ",
     },
     {
       "type": "gpu",
-      "key": " Gpu ",
-      "format": "{vendor} {type}",
-      "keyIcon": "󰾲",
+      "key": "Gpu  ",
+      "format": "{vendor} {name}",
       "driverSpecific": false,
       "detectionMethod": "pci",
       "temp": false,
-      "hideType": "none",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      }
+      "hideType": "integrated",
     },
     {
       "type": "memory",
-      "format": "{percentage-bar} - {used} / {total}",
-      "key": " RAM ",
-      "keyIcon": "",
-      "percent": {
-        "green": 30,
-        "yellow": 80,
-        "type": 0
-      }
+      "format": "{used} / {total}",
+      "key": "RAM ",
     },
     {
       "type": "disk",
       "format": "{size-percentage-bar} {size-used} / {size-total} - {mountpoint}",
-      "key": " Disco ",
-      "keyIcon": "",
+      "key": "Disco ",
       "showRegular": true,
       "showExternal": true,
       "showHidden": false,

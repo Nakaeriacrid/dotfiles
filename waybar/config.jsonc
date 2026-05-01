@@ -33,7 +33,7 @@
     "format": ""
   },
   "clock": {
-    "timezone": "America/Sao_Paulo",
+    "locale": "C",
     "format": "{:%H:%M  %d/%m}",
     "tooltip-format": "{calendar}",
     "calendar": {
