@@ -9,7 +9,7 @@
 /* Configurações da barra de fundo */
 window#waybar {
   border: 2px solid #84C5B1;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.5);
   border-radius: 6px;
 }
 
