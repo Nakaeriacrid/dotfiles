@@ -108,7 +108,7 @@
      "break",
     {
      "type": "custom",
-     "key": "Meu GitHub",
+     "key": "Minhas dotfiles",
      "separator": " 󰔰 ",
      "format": "https://github.com/Nakaeriacrid?tab=repositories",
      "outputColor": "#00FFCF",
@@ -118,11 +118,11 @@
       "type": "separator",
       "string": "",
       "outputColor": "#40FFD9",
-      "times": 22
+      "times": 68
     },
     {
       "type": "custom",
-      "format": "─────────────────────────────────────────────────────────────────╯",
+      "format": "─────────────────────────────────────────────────────────────────────╯",
     },
       "break",
     {
@@ -133,7 +133,7 @@
     {
       "type": "kernel",
       "key": "Distro ",
-      "format": "{sysname} {release}",
+      "format": "{release}",
       "type": "kernel"
     },
     {
@@ -148,6 +148,7 @@
     {
       "type": "packages",
       "key": "Pacotes 󰏔",
+      "format": "{pacman}",
       "disabled": [
         "apk"
       ],
@@ -164,6 +165,11 @@
       "string": "",
       "outputColor": "#40FFD9",
       "times": 50
+    },
+    {
+      "type": "shell",
+      "key": "Shell ",
+      "format": "{pretty-name}"
     },
     {
       "type": "terminal",
