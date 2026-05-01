@@ -1,0 +1,17 @@
+width=320
+height=400
+prompt=Buscar...
+xoffset=40
+yoffset=50
+allow_images=true
+mode=drun
+exec_search=true
+insensitive=true
+colors=colors
+filter_rate=100
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+drun-display_generic=true

@@ -1,0 +1,56 @@
+window {
+    margin: 1px;
+    border: 0px solid #000000;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: DepartureMono;
+}
+
+@keyframes erscheinen {
+    from {opacity: 0;}
+      to {opacity: 1;}
+}
+
+#input {
+    margin: 0px;
+    border: 0px solid #BDF285;
+    background-color: #B5B5B5;
+    border-radius: 6px 6px 0px 0px;
+    color: #000000;
+}
+
+#inner-box {
+    margin: 0px;
+    border-radius: 6px;
+    border: 0px solid #000000;
+    background-color: rgba(0,0,0,0.7;
+    color: #000000;
+}
+
+/* #inner-box flowboxchild:nth-child(even) { */
+/*     background-color: #555555; */
+/* } */
+
+#outer-box {
+    margin: 0px;
+    border: 0px solid rgba(0,0,0,1.0);
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#scroll {
+    margin: 0px;
+    border: 0px solid #6DFF69;
+    border-radius: 0px 0px 6px 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* animation: erscheinen 0.3s linear; */
+}
+
+#text {
+    margin: 4px;
+    /* background-color: #000000; */
+    color: #FFFFFF;
+}
+
+#selected {
+    background-color: rgba(0,0,0,0.8);
+}
