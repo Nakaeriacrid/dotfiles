@@ -45,8 +45,8 @@ window#waybar.hidden {
 }
 
 #clock {
-  background: rgba(98,88,121,1);
-  border: 2px solid rgba(132,195,183,1);
+  background: rgba(98,88,121,0.8);
+  border: 2px solid rgba(68,58,98,1);
   min-width: 100px;
 }
 #hardware {
