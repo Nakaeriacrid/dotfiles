@@ -15,18 +15,14 @@
   "modules-left": [
     "custom/archicon",
     "clock",
-    "cpu",
-    "memory",
-    "temperature"
+    "group/hardware",
   ],
 
   "modules-center": [
   ],
 
   "modules-right": [
-    "power-profiles-daemon",
-    "pulseaudio/slider",
-    "mpris"
+    "group/musica",
   ],
   /* Módulos da esquerda */
   "custom/archicon": {
@@ -42,11 +38,11 @@
     }
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": "{usage}%  ",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% 󰍛",
+    "format": "{}%  ",
     "tooltip": true,
     "tooltip-format": "Em Uso: {used} / {total} ({percentage}%)"
   },
@@ -57,24 +53,27 @@
       ""
     ]
   },
-  /* Módulos centro */
-
-  /* Módulos direita */
-  "pulseaudio/slider": {
-    "format": "{volume}%",
-    "format-muted": " MUTE",
-    "step": 5,
-    "tooltip": false
-  },
   "power-profiles-daemon": {
-  "format": "{icon}",
-  "tooltip-format": "{profile}",
-  "tooltip": true,
-  "format-icons": {
+    "format": "{icon}",
+    "tooltip-format": "{profile}",
+    "tooltip": true,
+    "format-icons": {
     "default": "",
     "performance": "",
     "balanced": "",
     "power-saver": ""
+},
+    
+  /* Módulos centro */
+
+  /* Módulos direita */  
+  "pulseaudio/slider": {
+    "format": "{volume}%",
+    "format-muted": " MUTE",
+    "step": 1,
+    "max": 100,
+    "min": 0,
+    "tooltip": false
   }
 },
   "mpris": {
@@ -83,12 +82,38 @@
   "format-paused": "{status_icon} {title} - {album}",
   "title-len": 30,
   "tooltip-format": "Artista: {artist} - Musica/Album: {title}/{album} {position}//{length}",
-  "player-icons": {
-    "default": "▶",
-    "mpv": "🎵"
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
     },
-  "status-icons": {
-    "paused": "⏸"
+    "status-icons": {
+      "paused": "⏸"
     },
-  }
-}
+  },
+  "group/musica": {
+  "children-class": "slider",
+  "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": false,
+    },
+  "modules": [
+    "mpris",
+    "pulseaudio/slider",
+  ]    
+  },
+    "group/hardware": {
+    "children-class": "mtp",
+    "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 200,
+        "transition-left-to-right": true,
+      },
+      "modules": [
+        "cpu",
+        "memory",
+        "temperature",
+        "power-profiles-daemon",
+      ]
+    },
+},

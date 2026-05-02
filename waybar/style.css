@@ -3,7 +3,7 @@
   border: none;
   font-family: "Departure Mono";
   font-size: 11px;
-  min-height: 8px;
+  min-height: 10px;
 }
 
 /* Configurações da barra de fundo */
@@ -20,22 +20,18 @@ window#waybar.hidden {
 /* Configurações módulos da esquerda */
 #custom-archicon,
 #clock,
-#cpu,
-#memory,
-#temperature {
+#slider,
+#hardware,
+#mtp,
+#musica {
+  color: rgba(0,0,0,1);
   margin-top: 6px;
   margin-bottom: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-#pulseaudio-slider,
-#power-profiles-daemon,
-#mpris {
-  color: #000000;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 6px;
+
 }
 
 /* Configurações especificas de módulos */
@@ -44,59 +40,66 @@ window#waybar.hidden {
 #custom-archicon {
   color: #1793d1;
   font-size: 20px;
-  margin-left: 2px;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
 #clock {
-  background: #898AC4;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+  background: rgba(98,88,121,1);
+  border: 2px solid rgba(132,195,183,1);
+  min-width: 100px;
 }
-
+#hardware {
+  border: 2px solid rgba(132,195,183,1);
+  border-radius: 6px;
+  background: rgba(255,218,179,0.8);
+}
 #cpu {
-  background: #8494FF;
+  min-width: 35px;
+  padding: 0px 4px 0px 4px;
 }
-
 #memory {
-  background: #8CA9FF;
+  padding: 0px 4px 0px 4px;
+  min-width: 35px;
 }
-
 #temperature {
-  background: #AAC4F5;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+  padding: 0px 4px 0px 4px;
+  min-width: 35px; 
 }
-
+#power-profiles-daemon {
+  padding: 0px 0px 0px 4px;
+  min-width: 35px;
+}  
 /* Módulos centro */
 
 /* Módulos direita */
-#power-profiles-daemon {
-  background: #6875ED;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+#musica {
+  margin-right: 6px;
+  border-radius: 6px;
+  border: 2px solid rgba(132,195,183,1);
+  min-width: 100px;
+  background: rgba(183,189,247,0.8);
 }
 #pulseaudio-slider {
-  background: #EDED68;
   min-width: 100px;
+  margin-right: 8px;
+  background: rgba(0,0,0,0);
 }
-
-#pulseaudio-slider trough {
+#pulseaudio-slider slider {
   min-height: 5px;
   min-width: 10px;
-  border-radius: 2px;
-  background: gray;
+  border: 2px solid rgba(140,78,130,1);
+  border-radius: 76px;
+  background: rgba(120,75,123,1);
+}
+#pulseaudio-slider trough {
+  min-width: 150px;
+  border-radius: 4px;
+  background: rgba(183,140,190,1);
 }
 #pulseaudio-slider highlight {
-  min-width: 10px;
-  border-radius: 2px;
-  background: black;
+  min-width: 1px;
+  border-radius: 4px;
+  background: rgba(180,89,170,1);
+}
 
-}
-#mpris {
-  min-width: 15px;
-  background: #78EC6A;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  margin-right: 6px;
-}
