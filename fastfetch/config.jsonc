@@ -94,7 +94,7 @@
     "dsForceDrm": false
   },
   "modules": [
-      "break",
+    "break",
     {
       "type": "title",
       "keyIcon": "",
@@ -105,15 +105,15 @@
         "host": "#00FF08"
       }
     },
-     "break",
+    "break",
     {
-     "type": "custom",
-     "key": "Minhas dotfiles",
-     "separator": " 󰔰 ",
-     "format": "https://github.com/Nakaeriacrid?tab=repositories",
-     "outputColor": "#00FFCF",
+      "type": "custom",
+      "key": "Minhas dotfiles",
+      "separator": " 󰔰 ",
+      "format": "https://github.com/Nakaeriacrid?tab=repositories",
+      "outputColor": "#00FFCF",
     },
-     "break",
+    "break",
     {
       "type": "separator",
       "string": "",
@@ -124,12 +124,12 @@
       "type": "custom",
       "format": "─────────────────────────────────────────────────────────────────────╯",
     },
-      "break",
+    "break",
     {
       "type": "custom",
       "format": "╭─────────────────── Sistema ────────────────────╮",
     },
-      "break",
+    "break",
     {
       "type": "kernel",
       "key": "Distro ",
@@ -189,12 +189,12 @@
       "type": "custom",
       "format": "╰────────────────────────────────────────────────╯",
     },
-      "break",
+    "break",
     {
       "type": "custom",
       "format": "╭─────────────────── Hardware ───────────────────╮",
     },
-      "break",
+    "break",
     {
       "type": "cpu",
       "format": "{name} / {freq-max}",
@@ -240,4 +240,3 @@
     },
   ]
 }
-
