@@ -1,14 +1,12 @@
-/* Configurações gerais */
  *{
   border: none;
   font-family: "Departure Mono";
   font-size: 11px;
-  min-height: 10px;
+  min-height: 1px;
 }
 
-/* Configurações da barra de fundo */
 window#waybar {
-  border: 2px solid #84C5B1;
+  border: 2px solid rgba(132,197,177,1);
   background-color: rgba(0,0,0,0.5);
   border-radius: 6px;
 }
@@ -17,12 +15,13 @@ window#waybar.hidden {
   opacity: 0.1;
 }
 
-/* Configurações módulos da esquerda */
+
 #custom-archicon,
 #clock,
 #slider,
 #hardware,
 #mtp,
+#keyboard-state,
 #musica {
   color: rgba(0,0,0,1);
   margin-top: 6px;
@@ -34,9 +33,7 @@ window#waybar.hidden {
 
 }
 
-/* Configurações especificas de módulos */
 
-/* Módulos esquerda */
 #custom-archicon {
   color: #1793d1;
   font-size: 20px;
@@ -46,14 +43,18 @@ window#waybar.hidden {
 
 #clock {
   background: rgba(98,88,121,0.8);
+  color: rgba(198,255,0,1);
   border: 2px solid rgba(68,58,98,1);
   min-width: 100px;
 }
+
+
 #hardware {
-  border: 2px solid rgba(132,195,183,1);
+  border: 2px solid rgba(187,139,142,1);
   border-radius: 6px;
   background: rgba(255,218,179,0.8);
 }
+
 #cpu {
   min-width: 35px;
   padding: 0px 4px 0px 4px;
@@ -70,16 +71,16 @@ window#waybar.hidden {
   padding: 0px 0px 0px 4px;
   min-width: 35px;
 }  
-/* Módulos centro */
 
-/* Módulos direita */
+
 #musica {
   margin-right: 6px;
   border-radius: 6px;
-  border: 2px solid rgba(132,195,183,1);
+  border: 2px solid rgba(132,122,153,1);
   min-width: 100px;
   background: rgba(183,189,247,0.8);
 }
+
 #pulseaudio-slider {
   min-width: 100px;
   margin-right: 8px;
@@ -95,7 +96,7 @@ window#waybar.hidden {
 #pulseaudio-slider trough {
   min-width: 150px;
   border-radius: 4px;
-  background: rgba(183,140,190,1);
+  background: rgb(155, 94, 164);
 }
 #pulseaudio-slider highlight {
   min-width: 1px;

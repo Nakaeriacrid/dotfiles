@@ -10,21 +10,15 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-
-  /* Ordenação dos módulos */
   "modules-left": [
     "custom/archicon",
     "clock",
     "group/hardware",
   ],
-
-  "modules-center": [
-  ],
-
+  "modules-center": [],
   "modules-right": [
     "group/musica",
   ],
-  /* Módulos da esquerda */
   "custom/archicon": {
     "format": ""
   },
@@ -58,30 +52,26 @@
     "tooltip-format": "{profile}",
     "tooltip": true,
     "format-icons": {
-    "default": "",
-    "performance": "",
-    "balanced": "",
-    "power-saver": ""
-},
-    
-  /* Módulos centro */
-
-  /* Módulos direita */  
-  "pulseaudio/slider": {
-    "format": "{volume}%",
-    "format-muted": " MUTE",
-    "step": 1,
-    "max": 100,
-    "min": 0,
-    "tooltip": false
-  }
-},
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    },
+    "pulseaudio/slider": {
+      "format": "{volume}%",
+      "format-muted": " MUTE",
+      "step": 1,
+      "max": 100,
+      "min": 0,
+      "tooltip": false
+    }
+  },
   "mpris": {
-  "interval": 1,
-  "format": "{player_icon} {artist}//{title} - {album}",
-  "format-paused": "{status_icon} {title} - {album}",
-  "title-len": 30,
-  "tooltip-format": "Artista: {artist} - Musica/Album: {title}/{album} {position}//{length}",
+    "interval": 1,
+    "format": "{player_icon} {artist}//{title} - {album}",
+    "format-paused": "{status_icon} {title} - {album}",
+    "title-len": 30,
+    "tooltip-format": "Artista: {artist} - Musica: {title} {position}//{length}",
     "player-icons": {
       "default": "▶",
       "mpv": "🎵"
@@ -91,29 +81,29 @@
     },
   },
   "group/musica": {
-  "children-class": "slider",
-  "orientation": "horizontal",
+    "children-class": "slider",
+    "orientation": "horizontal",
     "drawer": {
       "transition-duration": 200,
       "transition-left-to-right": false,
     },
-  "modules": [
-    "mpris",
-    "pulseaudio/slider",
-  ]    
+    "modules": [
+      "mpris",
+      "pulseaudio/slider",
+    ]
   },
-    "group/hardware": {
+  "group/hardware": {
     "children-class": "mtp",
     "orientation": "horizontal",
-      "drawer": {
-        "transition-duration": 200,
-        "transition-left-to-right": true,
-      },
-      "modules": [
-        "cpu",
-        "memory",
-        "temperature",
-        "power-profiles-daemon",
-      ]
+    "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": true,
     },
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature",
+      "power-profiles-daemon",
+    ]
+  },
 },
