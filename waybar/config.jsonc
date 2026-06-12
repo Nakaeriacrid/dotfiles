@@ -1,27 +1,24 @@
 {
   "layer": "top",
   "position": "top",
-  "autohide": true,
+  "margin-top": 2,
+  "margin-bottom": 4,
   "margin-right": 6,
   "margin-left": 6,
-  "margin-top": 6,
-  "margin-bottom": 1,
+  "autohide": true,
   "autohide-blocked": false,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "modules-left": [
-    "custom/archicon",
     "clock",
-    "group/hardware",
+    "group/hardware"
   ],
   "modules-center": [],
   "modules-right": [
-    "group/musica",
+    "group/musica"
   ],
-  "custom/archicon": {
-    "format": ""
-  },
+
   "clock": {
     "locale": "C",
     "format": "{:%H:%M  %d/%m}",
@@ -32,25 +29,17 @@
     }
   },
   "cpu": {
-    "format": "{usage}%  ",
+    "interval": 5,
+    "format": "CPU: [{usage}% {avg_frequency}GHz]",
     "tooltip": false
   },
   "memory": {
-    "format": "{}%  ",
-    "tooltip": true,
-    "tooltip-format": "Em Uso: {used} / {total} ({percentage}%)"
-  },
-  "temperature": {
-    "format": "{temperatureC}°C {icon}",
-    "tooltip": false,
-    "format-icons": [
-      ""
-    ]
+    "format": "Memória: [{used} GB/{total} GB]",
+    "tooltip": false
   },
   "power-profiles-daemon": {
     "format": "{icon}",
-    "tooltip-format": "{profile}",
-    "tooltip": true,
+    "tooltip": false,
     "format-icons": {
       "default": "",
       "performance": "",
@@ -68,9 +57,9 @@
   },
   "mpris": {
     "interval": 1,
-    "format": "{player_icon} {artist}//{title} - {album}",
+    "format": "{artist}//{title} - {album} {player_icon} ",
     "format-paused": "{status_icon} {title} - {album}",
-    "title-len": 30,
+    "title-len": 40,
     "tooltip-format": "Artista: {artist} - Musica: {title} {position}//{length}",
     "player-icons": {
       "default": "▶",
@@ -78,18 +67,18 @@
     },
     "status-icons": {
       "paused": "⏸"
-    },
+    }
   },
   "group/musica": {
     "children-class": "slider",
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 200,
-      "transition-left-to-right": false,
+      "transition-left-to-right": false
     },
     "modules": [
       "mpris",
-      "pulseaudio/slider",
+      "pulseaudio/slider"
     ]
   },
   "group/hardware": {
@@ -97,13 +86,12 @@
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 200,
-      "transition-left-to-right": true,
+      "transition-left-to-right": true
     },
     "modules": [
       "cpu",
       "memory",
-      "temperature",
-      "power-profiles-daemon",
+      "power-profiles-daemon"
     ]
-  },
-},
+  }
+}
