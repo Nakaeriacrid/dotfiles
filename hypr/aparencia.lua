@@ -2,9 +2,9 @@
 hl.config({
     general = {
         gaps_in  = 3,
-        gaps_out = { top = 3, left = 6, right = 6, bottom = 12},
+        gaps_out = { top = 0, left = 6, right = 6, bottom = 8},
 
-        border_size = 2,
+        border_size = 4,
 
         col = {
             active_border   = { colors = {"rgba(129,166,198,1)", "rgba(0,255,153,1)"}, angle = 45 },
@@ -80,19 +80,6 @@ hl.config({
         new_status = "master",
     },
 })
-hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
-    },
-})
-
-hl.config({
-    misc = {
-        force_default_wallpaper = 1,
-        disable_hyprland_logo   = true,
-    },
-})
-
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,

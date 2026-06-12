@@ -9,18 +9,14 @@ hl.monitor({
 -- Auto inicialização https://wiki.hypr.land/Configuring/Basics/Autostart/
 hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar & hyprpaper & mako & openrgb --noautoconnect -p Vermeio")
-  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP & systemctl --user start hyprpolkitagent")
+  hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)
 
 -- Hibernar sistema
 hl.on("hyprland.shutdown", function()
   hl.exec_cmd("openrgb --noautoconnect -p Preto")
 end)
-
--- Variaveis de ambiente https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-hl.env("HYPRSHOY_DIR", "$HOME/Imagens/Prints")
-hl.env("XCURSOR_SIZE", "20")
-hl.env("HYPRCURSOR_SIZE", "20")
 
 -- Permissões https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
 hl.config({ 
@@ -31,6 +27,7 @@ hl.config({
   hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
   hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
   hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
+  hl.permission("/usr/(bin|local/bin)/hyprpicker", "screencopy", "allow")
 
 -- Input https://wiki.hypr.land/Configuring/Basics/Variables/#input
 hl.config({
@@ -48,6 +45,7 @@ hl.config({
 })
 
 --Puxar outros arquivos
-require("extra/windowrules") 
-require("extra/atalhos")
-require("extra/aparencia")
+require("envs") --Variaveis de ambiente
+require("windowrules") -- Regras do comportamento de janelas
+require("atalhos") -- Aplicativos padrões e teclas de atalho
+require("aparencia") -- Aparencia geral do Hyprland
